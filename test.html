@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test</title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+    <!-- kaho ↓ -->
+    <!-- Navbar-->
+    <header>
+        <!-- <div class="bg-[url('K.assets/background.svg')] bg-center relative">-->
+            <!-- <nav>  -->
+                <nav class="bg-[#252B42] md:bg-transparent flex justify-between items-center w-full pt-[36px] pr-[38px] pb-[30px] pl-[35px] z-10 absolute">
+                    <!-- この↑navだけがabsolute -->
+                    <p class="text-white text-[24px] font-bold  p-0 mb-0">BrandName</p>
+                    <div class="flex gap-4 md:hidden justify-end">
+                        <img class="md:hidden" src="./K.assets/search.svg" alt="search"/>
+                        <img class="md:hidden" src="./K.assets/shopping-cart.svg" alt="shopping-cart"/>
+                        <div class="relative">
+                            <input type="checkbox" id="menu-toggle" class="hidden peer" />
+                            <label for="menu-toggle" class="cursor-pointer">
+                                <img src="./K.assets/hamburger.svg" />
+                            </label>
+                            <!-- <input type="checkbox" id="toggleMenuCheckbox" class="hidden" />
+                            <label for="toggleMenuCheckbox" class="toggleMenu p-2 bg-none text-white rounded-md md:hidden" aria-label="Toggle navigation">☰</label>
+                            <div id="navbarNavDropdown" class="p-4 bg-[#252B42] md:flex md:space-x-8 md:mt-0 md:bg-transparent mt-2 bg-gray-100 p-4 hidden md:block w-full">
+                                <a href="#" class="block p-2 text-gray-800">Home</a>
+                                <a href="#" class="block p-2 text-gray-800">About</a>
+                                <a href="#" class="block p-2 text-gray-800">Contact</a>
+                            </div> -->
+                            
+                            <div class="p-4 bg-[#252B42] w-full opacity-90 z-16 hidden peer-checked:block absolute left-0 top-0">
+                                <ul class="list-none m-0 p-0 text-center text-white w-full">
+                                    <li class="p-4 w-full">
+                                    <a class="text-3xl block" href="#">Home</a>
+                                    </li>
+                                    <li class="m-2 p-4">
+                                        <a class="text-3xl" href="#">Product</a>
+                                    </li>
+                                    <li class="m-2 p-4">
+                                        <a class="text-3xl" href="#">Pricing</a>
+                                    </li>
+                                    <li class="m-2 p-4">
+                                        <a class="text-3xl" href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <style>
+                                #toggleMenuCheckbox:checked + label + #navbarNavDropdown {display: block;}
+                            </style>
+                        </div>
+                    </div>
+                <!-- </nav>  -->
+                    <div class="hidden md:flex md:space-between p-4 text-white" id="navbarNavDropdown">
+                        <ul class="md:p-0 navbar-nav  mb-2 md:mb-0 flex items-center pt-5 gap-4 z-[3]">
+                            <li class="flex items-center">
+                                <p class="text-white p-0 m-0 text-[14px] font-semibold" aria-current="page" href="#">Home</p>
+                            </li>
+                            <li class="flex items-center">
+                                <p class="text-white p-0 m-0 text-[14px] font-semibold" href="#">Product</p>
+                            </li>
+                            <li class="flex align-items-center">
+                                <p class="active text-white p-0 m-0 text-[14px] font-semibold" aria-current="page" href="#">Pricing</p>
+                            </li>
+                            <li class="flex items-center">
+                                <p class="text-white p-0 m-0 text-[14px] font-semibold" href="#">Contact</p>
+                            </li>
+                        </ul>
+                    </div>    
+                    <div class="flex gap-5 items-center">
+                        <p class="text-white hidden md:block m-0 text-[14px] font-semibold pl-[230px]" href="#">Login</p>
+                        <button class="hidden md:block text-white w-[214px] h-[52px] bg-[#23a6f0] text-[14px] font-bold rounded" type="submit">
+                        Become a member →
+                        </button>
+                    </div>
+                </nav>
+            <!-- 1st Section-->
+                <!-- ここ↓に背景のdivをコピペして上のをコメントアウトしたよ、これもrelativeで。-->
+                <div class="bg-[url('K.assets/background.svg')] bg-center relative">           
+                    <div class="flex flex-col items-center md:items-start gap-2 text-white text-center md:text-start md:pl-[55px] relative text-[36px] font-bold pt-48 py-40">
+                    <!-- ↑文字囲ってるセクションもrelativeだった、ごめん。文字がnavバーに重なるのをpadding 48とかで高さを出す-->
+                        <h2 class="text-[40px] font-[700] w-80 md:w-100">We Ensure A Best Insurance Service</h2>
+                        <p class="text-[20px] w-80 md:w-130 p-2">We know how large objects will act, but things on a small scale just do not act that way.</p>
+                        <div class="button_top flex flex-col items-center md:flex-row gap-3">
+                            <button class="flex items-center rounded-full p-2 text-white w-[185px] h-[42px] bg-[#23a6f0] px-[36px] py-[15px] text-[14px] font-bold">Get Quote Now</button>
+                            <button class="flex items-center btn-outline-light rounded-full p-2 w-[154px] h-[42px] px-[36px] py-[15px] text-[14px] font-bold border-2 border-white">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+    </header>    
+</body>
+</html>
+<main>
+    <!-- 2nd Section-->
+    <div class="flex flex-col text-white gap-8 bg-[#252b42] p-10 md:flex-row">
+        <div class="flex flex-col items-center p-10">
+            <img src="./K.assets/icn resize .icn-xl.svg" class="w-18" alt="resize" />
+            <h5 class="text-center pt-8">Peace of Mind</h5>
+            <p class="text-center max-w-[234px] text-sm">
+                So it really behaves like neither. Now we have given up.
+            </p>
+        </div>
+        <div class="flex flex-col items-center p-12">
+            <img src="./K.assets/icn resize .icn-xl.svg" class="w-18" alt="resize" />
+            <h5 class="text-center pt-8">Set For Life</h5>
+            <p class="text-center max-w-[234px] text-sm">
+                They were used to create the machines that launched
+            </p>
+        </div>
+        <div class="flex flex-col items-center p-12">
+            <img src="./K.assets/icn resize .icn-xl.svg" class="w-18" alt="resize" />
+            <h5 class="text-center pt-8">100% Satisfaction</h5>
+            <p class="text-center max-w-[234px] text-sm">
+                So it really behaves like neither. Now we have given up.
+            </p>
+        </div>
+    </div>
+    
+    <!-- 3rd Section-->
+    <div class="flex flex-col items-center bg-[#8ec2f2] p-10">
+        <h1 class="text-white text-center text-2xl pt-12">What clients say</h1>
+        <p class="text-white text-center w-[308px] mb-16 text-sm">
+            Problems trying to resolve the conflict between the two major realms
+            of Classical physics: Newtonian mechanics
+        </p>
+        <div class="flex flex-col items-center gap-16 md:flex-row">
+            <div class="max-w-[414px] h-[408px] p-10 bg-white shadow-md relative">
+                <div>
+                    <h5 class="font-bold">Regina Miles</h5>
+                    <p class="text-gray-500">Designer</p>
+                    <img src="K.assets/stars.svg" alt="Icon" class="my-3" />
+                    <p class="text-gray-500 text-sm">
+                        This proved to be impossible using the traditional concepts of space and time.
+                        Einstein developed a new view of time first and then space.
+                    </p>
+                </div>
+                <img src="K.assets/user.1.svg" class="hidden md:block w-20 h-20 rounded-full border-0 absolute top-[40px] left-[-40px]" />
+            </div>
+            <div class="max-w-[414px] h-[408px] p-10 bg-white shadow-md relative">
+                <div>
+                    <h5 class="font-bold">Regina Miles</h5>
+                    <p class="text-gray-500">Designer</p>
+                    <img src="K.assets/stars.svg" alt="Icon" class="my-3" />
+                    <p class="text-gray-500 text-sm p-3">
+                        This proved to be impossible using the traditional concepts of space and time.
+                        Einstein developed a new view of time first and then space.
+                    </p>
+                </div>
+                <img src="K.assets/user.2.svg" class="hidden md:block w-20 h-20 rounded-full border-0 absolute top-[40px] left-[-40px]" />
+            </div>
+        </div>
+    </div>
+    
+    <!-- 4th section -->
+    <section class="bg-[#252b42] p-10">
+        <div class="py-12 text-center">
+            <h2 class="text-white text-4xl font-bold mb-8">We Are Optimists Who Love To Work Together</h2>
+            <p class="text-white text-sm max-w-md mx-auto mb-12">
+                Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="relative">
+                <img src="./assets/imgs/post-1.svg" class="w-full h-full object-cover" alt="post-1" />
+                <div class="absolute bottom-0 p-4 bg-gradient-to-t from-gray-900 to-transparent">
+                    <h6 class="text-white text-sm">Tax Management</h6>
+                    <h3 class="text-white text-lg font-bold">Life Tips From Top Ten Adventure Travelers</h3>
+                    <button class="bg-[#23a6f0] text-white px-6 py-2 rounded-full mt-4">View Project</button>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="./assets/imgs/post-2.svg" class="w-full h-full object-cover" alt="post-2" />
+                <div class="absolute bottom-0 p-4 bg-gradient-to-t from-gray-900 to-transparent">
+                    <h6 class="text-white text-sm">Tax Management</h6>
+                    <h3 class="text-white text-lg font-bold">Life Tips From Top Ten Adventure Travelers</h3>
+                    <button class="bg-[#23a6f0] text-white px-6 py-2 rounded-full mt-4">View Project</button>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="./assets/imgs/post-3.svg" class="w-full h-full object-cover" alt="post-3" />
+                <div class="absolute bottom-0 p-4 bg-gradient-to-t from-gray-900 to-transparent">
+                    <h6 class="text-white text-sm">Tax Management</h6>
+                    <h3 class="text-white text-lg font-bold">Life Tips From Top Ten Adventure Travelers</h3>
+                    <button class="bg-[#23a6f0] text-white px-6 py-2 rounded-full mt-4">View Project</button>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="./assets/imgs/post-4.svg" class="w-full h-full object-cover" alt="post-4" />
+                <div class="absolute bottom-0 p-4 bg-gradient-to-t from-gray-900 to-transparent">
+                    <h6 class="text-white text-sm">Tax Management</h6>
+                    <h3 class="text-white text-lg font-bold">Life Tips From Top Ten Adventure Travelers</h3>
+                    <button class="bg-[#23a6f0] text-white px-6 py-2 rounded-full mt-4">View Project</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
